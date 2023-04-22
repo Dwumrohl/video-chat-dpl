@@ -8,11 +8,17 @@ function App() {
      const { user } = useAuth();
 
 
+    // return (
+    //     <div className="container">
+    //         {user ? <Router /> : <UnauthenticatedApp />}
+    //     </div>
+    // );
     return (
         <div className="container">
-            {user ? <Router /> : <UnauthenticatedApp />}
+            <Router /> 
         </div>
     );
+
 }
 
 export default App;
