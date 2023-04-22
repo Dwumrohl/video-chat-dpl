@@ -15,7 +15,7 @@ function App() {
     // );
     return (
         <div className="container">
-            <AuthenticatedApp /> 
+            <Router /> 
         </div>
     );
 
