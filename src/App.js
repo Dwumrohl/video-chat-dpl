@@ -1,8 +1,6 @@
 import MainScreen from "./components/MainScreen/MainScreen.component";
 import firepadRef from "./server/firebase";
 import "./App.css";
-import notifyFile from "./notification-sound.mp3";
-import unnotifyFile from "./leaveSound.mp3";
 import React, { useEffect} from "react";
 import {getDatabase, ref, child, onValue, push, onChildAdded, onChildRemoved, onChildChanged, remove, onDisconnect} from "firebase/database";
 import {
@@ -79,8 +77,8 @@ function App(props) {
           });
         });
         const { userName: name, preferences = {} } = snap.val();
-        const audio = new Audio(notifyFile);
-        audio.play(); /////////////////////////////////////////////////////////////////////////////////////
+        // const audio = new Audio(notifyFile);
+        // audio.play(); /////////////////////////////////////////////////////////////////////////////////////
         props.addParticipant({
           [snap.key]: {
             name,
@@ -89,8 +87,8 @@ function App(props) {
         });
       });
       onChildRemoved(participantRef, (snap) => {
-        const audio = new Audio(unnotifyFile);
-        audio.play();
+        // const audio = new Audio(unnotifyFile);
+        // audio.play();
         props.removeParticipant(snap.key);
       });
     }

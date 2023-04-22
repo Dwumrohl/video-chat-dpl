@@ -2,8 +2,6 @@ import React, { useRef, useEffect } from "react";
 import MeetingFooter from "../MeetingFooter/MeetingFooter.component";
 import Participants from "../Participants/Participants.component";
 import "./MainScreen.css";
-import muteSound from "../../muteSound.mp3";
-import unmuteSound from "../../unmuteSound.mp3";
 import { connect } from "react-redux";
 import { setMainStream, updateUser } from "../../store/actioncreator";
 
@@ -12,11 +10,11 @@ const MainScreen = (props) => {
 
   const onMicClick = (micEnabled) => {
     if (micEnabled){
-      const audio = new Audio(unmuteSound);
-        audio.play()
+      // const audio = new Audio(unmuteSound);
+      //   audio.play()
     }else {
-      const audio = new Audio(muteSound);
-        audio.play()
+      // const audio = new Audio(muteSound);
+      //   audio.play()
     }
     if (props.stream) {
       props.stream.getAudioTracks()[0].enabled = micEnabled;
