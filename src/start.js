@@ -8,16 +8,16 @@ function App() {
      const { user } = useAuth();
 
 
-    // return (
-    //     <div className="container">
-    //         {user ? <Router /> : <UnauthenticatedApp />}
-    //     </div>
-    // );
     return (
         <div className="container">
-            <Router /> 
+            {user ? <Router /> : <UnauthenticatedApp />}
         </div>
     );
+    // return (
+    //     <div className="container">
+    //         <Router /> 
+    //     </div>
+    // );
 
 }
 
