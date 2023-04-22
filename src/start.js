@@ -1,5 +1,5 @@
 import { AuthenticatedApp } from './components/AuthenticatedApp';
-import { Router } from './components/Router';
+import { Router } from './components/Router/router';
 import { UnauthenticatedApp } from './components/UnauthenticatedApp';
 import { useAuth } from './hooks/useAuth';
 import './start.css';
