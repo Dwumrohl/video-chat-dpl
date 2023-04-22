@@ -2,3 +2,7 @@
     background: var(--color-blue);
     padding: 16px;
 }
+
+.unauthLbl{
+    color: white;
+}

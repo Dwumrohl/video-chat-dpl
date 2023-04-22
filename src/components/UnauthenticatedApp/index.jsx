@@ -13,7 +13,7 @@ function UnauthenticatedApp() {
 
     return (
         <>
-            <h2>Необходимо произвести вход</h2>
+            <h2 className='unauthLbl'>Необходимо произвести вход</h2>
             <div>
             <div className="login">
                 <button onClick={login} className="login">
