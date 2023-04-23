@@ -35,7 +35,7 @@ const MeetingFooter = (props) => {
   };
 
   const onLeaveClick = () => {
-    //window.location.href = "/";
+    window.location.href = "/";
   }
 
   const onScreenClick = () => {

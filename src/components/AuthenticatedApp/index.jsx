@@ -1,5 +1,5 @@
 import { userName, logout, roomTemp} from '../../server/firebase';
-import {Link} from 'react-router-dom';
+import {Link, Navigate, useNavigate} from 'react-router-dom';
 import React, {useState} from "react";
 import "./index.css";
 
@@ -10,18 +10,19 @@ import "./index.css";
 function AuthenticatedApp() {
     const [room, setRoom] = useState("");
     var romTemp = null;
+    const navigate = useNavigate();
     //window.room = romTemp; 
     function testRoom(){
         romTemp = roomTemp();
         localStorage.setItem("roomId",romTemp);
-        window.location.href='/video-chat-dpl/room/'+romTemp;
+        //window.location.href='/room/'+romTemp;
+        navigate("/room/"+romTemp);
     }
 
     const handleSubmit =  (event) => {
         event.preventDefault();
         localStorage.setItem("roomId",room);
-        window.location.href='/video-chat-dpl/room/' + room;
-        console.log(room);
+        navigate("/room/"+room);
     }
     return (
         <div className='main'>

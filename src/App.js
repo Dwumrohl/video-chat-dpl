@@ -12,15 +12,19 @@ import {
 } from "./store/actioncreator";
 import { connect } from "react-redux";
 import { useAuth } from "./hooks/useAuth";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 function App(props) {
+  const location = useLocation();
+  const navigate = useNavigate();
   const room = localStorage.getItem("roomId");
-  const urlTemp = window.location.pathname.split('/');
+  const urlTemp = location.pathname.split('/');
   const urlRef = urlTemp[urlTemp.length-1];
-  // if (room != urlRef){
-  //   window.location.href = '/';
-  // }
+  if (room != urlRef){
+    //window.location.href = '/';
+    navigate("/");
+  }
   const userTemp = useAuth();
   const userName = userTemp.user.displayName;
   const getUserStream = async () => {

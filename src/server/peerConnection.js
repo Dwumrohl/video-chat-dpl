@@ -1,8 +1,6 @@
 import firepadRef from "./firebase";
 import { store } from "../index";
 import {child, onChildAdded, push, set, update} from "firebase/database";
-import { useMatch } from "react-router-dom";
-import React from "react";
 
   // const urlTemp = window.location.pathname.split('/');
   // const urlRef = urlTemp[urlTemp.length-1];
@@ -43,7 +41,7 @@ export const createOffer = async (peerConnection, receiverId, createdID) => {
 };
 
 export const initializeListensers = async (userId) => {
-     const urlTemp = window.location.pathname.split('/');
+   const urlTemp = window.location.hash.split('/');
    const urlRef = urlTemp[urlTemp.length-1];
    const fpdRef = child(firepadRef, urlRef);
    participantRef = child(fpdRef, "participants");
