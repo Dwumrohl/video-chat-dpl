@@ -10,7 +10,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import ReactTooltip from "react-tooltip";
 import "./MeetingFooter.css";
+import { useNavigate } from "react-router-dom";
 const MeetingFooter = (props) => {
+  const navigate = useNavigate();
   const [streamState, setStreamState] = useState({
     mic: true,
     video: false,
@@ -35,7 +37,7 @@ const MeetingFooter = (props) => {
   };
 
   const onLeaveClick = () => {
-    window.location.href = "/";
+    navigate("/");
   }
 
   const onScreenClick = () => {

@@ -1,7 +1,7 @@
 {
   "name": "video-chat-dpl",
   "version": "0.1.0",
-  "homepage": "https://dwumrohl.github.io/video-chat-dpl",
+  "homepage": "https://dwumrohl.github.io/video-chat-dpl/#",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
