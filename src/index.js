@@ -15,7 +15,10 @@ ReactDOM.render(
     <Provider store={store}>
       <AuthProvider>
         <HashRouter>
-        <Start />
+        <Routes>
+                <Route path="/" element={<Start />} />
+                <Route path="/room/:id" element={<App />} />
+        </Routes>
         </HashRouter>
       </AuthProvider>
     </Provider>

@@ -1,5 +1,4 @@
 import { AuthenticatedApp } from './components/AuthenticatedApp';
-import { Router } from './components/Router/router';
 import { UnauthenticatedApp } from './components/UnauthenticatedApp';
 import { useAuth } from './hooks/useAuth';
 import './start.css';
@@ -10,14 +9,9 @@ function App() {
 
     return (
         <div className="container">
-            {user ? <Router /> : <UnauthenticatedApp />}
+            {user ? <AuthenticatedApp /> : <UnauthenticatedApp />}
         </div>
     );
-    // return (
-    //     <div className="container">
-    //         <Router /> 
-    //     </div>
-    // );
 
 }
 
