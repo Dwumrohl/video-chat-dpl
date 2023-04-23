@@ -14,13 +14,13 @@ function AuthenticatedApp() {
     function testRoom(){
         romTemp = roomTemp();
         localStorage.setItem("roomId",romTemp);
-        window.location.href='/room/'+romTemp;
+        window.location.href='/video-chat-dpl/room/'+romTemp;
     }
 
     const handleSubmit =  (event) => {
         event.preventDefault();
         localStorage.setItem("roomId",room);
-        window.location.href='/room/' + room;
+        window.location.href='/video-chat-dpl/room/' + room;
         console.log(room);
     }
     return (

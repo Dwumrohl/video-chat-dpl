@@ -19,7 +19,7 @@ ReactDOM.render(
         <Routes>
                 <Route path="/" element={<Start />} />
                 <Route exact path="/video-chat-dpl" element={<Start/>} />
-                <Route path="/video-chat-dpl/room/:id" element={<App />} />
+                <Route path="/room/:id" element={<App />} />
         </Routes>
         </HashRouter>
       </AuthProvider>
