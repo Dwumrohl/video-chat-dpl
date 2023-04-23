@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/video-chat-dpl/static/css/main.90b6c514.chunk.css",
-    "main.js": "/video-chat-dpl/static/js/main.a5cc0521.chunk.js",
-    "main.js.map": "/video-chat-dpl/static/js/main.a5cc0521.chunk.js.map",
+    "main.js": "/video-chat-dpl/static/js/main.aa425ec4.chunk.js",
+    "main.js.map": "/video-chat-dpl/static/js/main.aa425ec4.chunk.js.map",
     "runtime-main.js": "/video-chat-dpl/static/js/runtime-main.29f3946c.js",
     "runtime-main.js.map": "/video-chat-dpl/static/js/runtime-main.29f3946c.js.map",
     "static/js/2.c8caa524.chunk.js": "/video-chat-dpl/static/js/2.c8caa524.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.29f3946c.js",
     "static/js/2.c8caa524.chunk.js",
     "static/css/main.90b6c514.chunk.css",
-    "static/js/main.a5cc0521.chunk.js"
+    "static/js/main.aa425ec4.chunk.js"
   ]
 }
