@@ -38,6 +38,7 @@ const MeetingFooter = (props) => {
 
   const onLeaveClick = () => {
     navigate("/");
+    window.location.reload(false);
   }
 
   const onScreenClick = () => {

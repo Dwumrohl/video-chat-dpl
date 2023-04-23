@@ -12,10 +12,11 @@ import {
 } from "./store/actioncreator";
 import { connect } from "react-redux";
 import { useAuth } from "./hooks/useAuth";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate} from "react-router-dom";
 
 
 function App(props) {
+  
   const location = useLocation();
   const navigate = useNavigate();
   const room = localStorage.getItem("roomId");
@@ -35,6 +36,11 @@ function App(props) {
 
     return localStream;
   };
+
+  const onBackButtonEvent = (e) =>{
+    e.preventDefault();
+  }
+
   useEffect(async () => {
     const stream = await getUserStream();
     stream.getVideoTracks()[0].enabled = false;

@@ -2,6 +2,7 @@ import { userName, logout, roomTemp} from '../../server/firebase';
 import {Link, Navigate, useNavigate} from 'react-router-dom';
 import React, {useState} from "react";
 import "./index.css";
+import { useEffect } from 'react';
 
 // import { Landing } from '../Landing';
 // import { ChatRoom } from '../ChatRoom';
@@ -24,6 +25,7 @@ function AuthenticatedApp() {
         localStorage.setItem("roomId",room);
         navigate("/room/"+room);
     }
+
     return (
         <div className='main'>
         <div className='inner'>
@@ -54,6 +56,7 @@ function AuthenticatedApp() {
         
     );
 }
+
 
 
 export { AuthenticatedApp };
