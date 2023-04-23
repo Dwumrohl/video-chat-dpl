@@ -7,13 +7,16 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import { userReducer } from "./store/reducer";
 import { AuthProvider } from "./context/auth";
+import { HashRouter } from "react-router-dom";
 
 export const store = createStore(userReducer);
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <AuthProvider>
+        <HashRouter>
         <Start />
+        </HashRouter>
       </AuthProvider>
     </Provider>
   </React.StrictMode>,
