@@ -18,9 +18,9 @@ function App(props) {
   const room = localStorage.getItem("roomId");
   const urlTemp = window.location.pathname.split('/');
   const urlRef = urlTemp[urlTemp.length-1];
-  if (room != urlRef){
-    window.location.href = '/';
-  }
+  // if (room != urlRef){
+  //   window.location.href = '/';
+  // }
   const userTemp = useAuth();
   const userName = userTemp.user.displayName;
   const getUserStream = async () => {
